@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.DeviceModeActivity">
+    
+    <include android:id="@+id/top"
+        layout="@layout/top"/>
+
+
+    <LinearLayout
+        android:id="@+id/ll_admin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="   你好，管理员\n请设置该设备模式"
+        android:layout_marginTop="80dp"
+        android:layout_gravity="center"
+        android:textSize="35sp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="70dp">
+        
+        <ImageView
+            android:id="@+id/iv_yf"
+            android:layout_width="100dp"
+            android:layout_height="133dp"
+            android:src="@drawable/tong_yf"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/iv_other"
+            android:layout_width="100dp"
+            android:layout_height="133dp"
+            android:src="@drawable/tong_other"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/iv_hs"
+            android:layout_width="100dp"
+            android:layout_height="133dp"
+            android:src="@drawable/tong_hs"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/iv_harm"
+            android:layout_width="100dp"
+            android:layout_height="133dp"
+            android:src="@drawable/tong_harm"/>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_valid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+        
+        <ImageView
+            android:id="@+id/iv_tong"
+            android:layout_width="120dp"
+            android:layout_height="160dp"
+            android:src="@drawable/empty_hs"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100dp"/>
+
+        <TextView
+            android:id="@+id/tv_card_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请刷卡/扫码验证身份\n投递有害垃圾"
+            android:layout_marginTop="36dp"
+            android:layout_gravity="center"
+            android:textSize="49sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_post_success"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+
+        <TextView
+            android:id="@+id/tv_post_success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="恭喜你！投递成功 获得1积分"
+            android:layout_marginTop="104dp"
+            android:layout_gravity="center"
+            android:textColor="#333333"
+            android:textSize="35sp"/>
+
+        <TextView
+            android:id="@+id/tv_post_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="本次投递垃圾1.02kg \n当前账户剩余56积分"
+            android:layout_marginTop="104dp"
+            android:layout_gravity="center"
+            android:textColor="#999999"
+            android:textSize="22sp"/>
+
+        <TextView
+            android:id="@+id/tv_back_main"
+            android:layout_width="190dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="46dp"
+            android:text="回到首页"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:background="@drawable/shape_corner_5_096dd9"/>
+
+        <TextView
+            android:id="@+id/tv_back_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15s后自动回到首页"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:textColor="#999999"
+            android:textSize="18sp"/>
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_toast"
+    android:includeFontPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_bg_99000000_cn_20"
+    android:padding="26dp"
+    android:textColor="#FFFFFFFF"
+    android:textSize="28dp" />

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include android:id="@+id/top"
+        layout="@layout/top"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/duihao"
+        android:layout_marginTop="76dp"
+        android:layout_gravity="center_horizontal"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="恭喜你设置成功！"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:textColor="#333333"
+        android:textStyle="bold"
+        android:textSize="49sp"/>
+
+
+
+    <TextView
+        android:id="@+id/tv_quit_admin"
+        android:layout_width="210dp"
+        android:layout_height="70dp"
+        android:text="退出管理员模式"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:background="@drawable/shape_corner_5_096dd9"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>
