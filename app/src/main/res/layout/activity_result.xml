@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_jf"
+        android:layout_width="801dp"
+        android:layout_height="168dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginLeft="240dp"
+        android:text="恭喜你，获得1积分\n账户剩余56积分"
+        android:gravity="center"
+        android:textSize="60sp"
+        android:textColor="#333333"/>
+
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="347dp"
+        android:text="本次成功投递1.02kg易腐垃圾"
+        android:gravity="center"
+        android:textSize="44sp"
+        android:textColor="#333333"/>
+
+
+    <TextView
+        android:id="@+id/tv_back"
+        android:layout_width="380dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="73dp"
+        android:layout_marginLeft="450dp"
+        android:text="回到首页（13s）"
+        android:background="@drawable/shape_corner_5_ffffff_333333"
+        android:gravity="center"
+        android:textSize="44sp"
+        android:textColor="#333333"/>
+
+
+
+
+</LinearLayout>

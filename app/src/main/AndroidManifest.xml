@@ -12,10 +12,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ui.DeviceModeActivity"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <activity android:name=".ui.MainActivity"
             android:screenOrientation="portrait">
@@ -25,6 +22,17 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".ui.SettingSuccessActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".ui.land.FirstPageActivity"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.land.ChooseQualityActivity"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".ui.land.ResultActivity"
+            android:screenOrientation="landscape"/>
     </application>
 
 </manifest>
