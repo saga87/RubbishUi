@@ -173,6 +173,7 @@ public class FirstPageActivity extends AppCompatActivity implements View.OnClick
         return true;
     }
 
+    //开启扫码
     private void startQrCode(){
         state = b.vbarOpen();
         if (state) {
