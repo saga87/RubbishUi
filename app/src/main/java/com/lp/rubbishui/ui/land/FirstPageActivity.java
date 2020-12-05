@@ -3,13 +3,22 @@ package com.lp.rubbishui.ui.land;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.alibaba.fastjson.JSON;
 import com.lp.rubbishui.R;
+import com.lp.rubbishui.bean.UserInfo;
+import com.lp.rubbishui.manager.RubbishManager;
+import com.lp.rubbishui.net.subject.NewObjResponse;
 import com.lp.rubbishui.utils.CommonUtils;
 import com.lp.rubbishui.utils.ToastUtil;
 import com.lp.rubbishui.utils.Vbar;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class FirstPageActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -25,7 +34,28 @@ public class FirstPageActivity extends AppCompatActivity implements View.OnClick
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_page);
         initView();
-        startQrCode();
+//        startQrCode();
+        queryUser();
+    }
+
+    private void queryUser() {
+        Call<NewObjResponse> response = RubbishManager.getInstance().getService().queryUserInfoByCard("330111115291151686786030940207");
+        response.enqueue(new Callback<NewObjResponse>() {
+            @Override
+            public void onResponse(Call<NewObjResponse> call, Response<NewObjResponse> response) {
+                NewObjResponse res = response.body();
+                if (res == null) return;
+                UserInfo i = JSON.parseObject(CommonUtils.getStringFromBase64(res.getData()), UserInfo.class);
+                Bundle b = new Bundle();
+                b.putString("code",i.getResidentName());
+                CommonUtils.jumpTo(FirstPageActivity.this,ChooseQualityActivity.class,b);
+            }
+
+            @Override
+            public void onFailure(Call<NewObjResponse> call, Throwable t) {
+
+            }
+        });
     }
 
     private void initView() {

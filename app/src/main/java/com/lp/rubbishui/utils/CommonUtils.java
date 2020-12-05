@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
+import android.util.Base64;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import java.text.SimpleDateFormat;
@@ -13,6 +14,10 @@ import java.util.Date;
 import static android.content.Context.INPUT_METHOD_SERVICE;
 
 public class CommonUtils {
+
+    public static String getStringFromBase64(String base64Str){
+        return new String(Base64.decode(base64Str.getBytes(), Base64.DEFAULT));
+    }
 
 
     public static String getTimeStamp() {
