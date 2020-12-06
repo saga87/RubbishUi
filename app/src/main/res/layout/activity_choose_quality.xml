@@ -4,13 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <SurfaceView
-        android:id="@+id/surfaceview2"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="50dp"
-        android:layout_width="100dp"
-        android:layout_height="100dp" />
-    
+
     <TextView
         android:id="@+id/tv_tip"
         android:layout_width="801dp"

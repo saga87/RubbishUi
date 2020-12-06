@@ -25,17 +25,11 @@ public class ResultActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
+        EventBus.getDefault().register(this);
+
         jfTv = findViewById(R.id.tv_jf);
         resultTv = findViewById(R.id.tv_result);
         backTv = findViewById(R.id.tv_back);
-        EventBus.getDefault().register(this);
-        backTv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                timeUtil.cancel();
-                finish();
-            }
-        });
 
         timeUtil = new CountDownTimeUtil(backTv);
         timeUtil.runTimer();
